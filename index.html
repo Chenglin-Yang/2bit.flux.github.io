@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>COCONut: Modernizing COCO Segmentation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+    <link rel="icon" 🥥>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://sites.google.com/view/xueqingdeng7/home">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://beckschen.github.io/vitamin">
+            ViTamin
+          </a>
+          <a class="navbar-item" href="https://github.com/bytedance/fc-clip">
+            FC-CLIP
+          </a>
+          <a class="navbar-item" href="https://github.com/bytedance/OmniScient-Model">
+            OSM
+          </a>
+          <a class="navbar-item" href="https://github.com/TACJu/MaXTron">
+            MaXTron
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-3 publication-title"> 🥥 COCONut: Crafting the Future of Segmentation Datasets with Exquisite Annotations in the Era of ✨Big Data✨</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://sites.google.com/view/xueqingdeng7/home">Xueqing Deng</a>,</span>
+            <span class="author-block">
+              <a href="https://yucornetto.github.io/">Qihang Yu</a>,</span>
+            <span class="author-block">
+              <a href="https://pengwangucla.github.io/peng-wang.github.io/">Peng Wang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://xiaohuishen.github.io/">Xiaohui Shen</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://liangchiehchen.com/">Liang-Chieh Chen</a>
+            </span>
+           
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">ByteDance Research, USA</span>
+            <!-- <span class="author-block"><sup>2</sup>Google Research</span> -->
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/file/d/1QgiG-X15kUGUMikNBg5MSROMgHvc-GhG/view?usp=drive_link"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="http://arxiv.org/abs/2404.08639"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/bytedance/coconut_cvpr2024"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://www.kaggle.com/datasets/xueqingdeng/coconut/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>  
+              <span class="link-block">
+                <a href="https://huggingface.co/collections/xdeng77/coconut-dataset-661da98608dd378c816a4398"
+                   class="external-link button is-normal is-rounded is-dark">
+
+                  <span>🤗 HuggingFace</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-widescreen">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser_video_v3.mov"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+       The COCONut dataset and supported tasks
+<!--         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits. -->
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-light is-big", style="margin-top: -35px">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <br>
+        <br>
+        <h2 class="title is-3">🔥 Highlights</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-five-fifths">
+        <p style="font-size: 20px;">
+        1.  We introduce COCONut, a modern, universal segmentation dataset that encompasses about 383K images and 5.18M <span style="color: rgb(199, 9, 9)"><b>human-verified</b></span> panoptic segmentation masks, along with 
+          with <span style="color:rgba(14, 122, 41, 0.904) " ><b>COCONut-val</b></span>, a new validation set as a novel and challenging testbed.
+        </p>
+        <!-- <br -->
+        <br>
+        <p style="font-size: 20px;">
+          2. We present benchmarked results on COCONut. As the training set increases, we observe consistent improvement in semantic/instance/panoptic segmentation and object detection, <span style="color: rgb(131, 102, 7)"><b>new SOTA result on open-vocabulary segmentation</b></span>, and <span style="color: rgb(4, 23, 107)"><b>better controllable image generation from semantic masks</b></span>. Additionally, our experimental results highlight the superior value of human annotations compared to pseudo-labels. 
+          
+        </p>
+        <br><br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In recent decades, the vision community has witnessed remarkable progress in visual recognition, partially owing to advancements in dataset benchmarks.
+            Notably, the established COCO benchmark has propelled the development of modern detection and segmentation systems.
+            However, the COCO segmentation benchmark has seen comparatively slow improvement over the last decade.
+            Originally equipped with coarse polygon annotations for `thing' instances, it gradually incorporated coarse superpixel annotations for `stuff' regions, which were subsequently heuristically amalgamated to yield panoptic segmentation annotations.
+            These annotations, executed by different groups of raters, have resulted not only in coarse segmentation masks but also in inconsistencies between segmentation types.
+            In this study, we undertake a comprehensive reevaluation of the COCO segmentation annotations.
+            By enhancing the annotation quality and expanding the dataset to encompass <b>383K</b> images with more than <b>5.18M</b> panoptic masks, we introduce COCONut, the <b>COCO</b> <b>N</b>ext <b>U</b>niversal segmen<b>T</b>ation dataset.
+            COCONut harmonizes segmentation annotations across semantic, instance, and panoptic segmentation with meticulously crafted high-quality masks, and establishes a robust benchmark for all segmentation tasks.
+            To our knowledge, COCONut stands as the inaugural large-scale universal segmentation dataset, verified by human raters.
+            We anticipate that the release of COCONut will significantly contribute to the community's ability to assess the progress of novel neural networks.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!--/ Abstract. -->
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"> COCO vs. COCONut dataset annotation comparison</h2>
+      </div>
+    </div>
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+
+        <!-- <p style="font-size: 20px;">
+         We compare our COCONut and COCO annotation below.
+        </p>     -->
+        <div class="column is-centered ">
+      <img src="./static/images/coco_coconut_comparison.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+
+    </div>
+    <div class="column is-centered ">
+      <img src="./static/images/stuff_coco_coconut_anno_comp.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"> COCONut dataset</h2>
+      </div>
+    </div>
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+
+        <!-- <p style="font-size: 20px;">
+         We compare our COCONut and COCO annotation below.
+        </p>     -->
+        <div class="column is-centered ">
+      <img src="./static/images/class_dist_2x2.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+
+    </div>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"> Human assisted annotation pipeline</h2>
+      </div>
+    </div>
+
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/pipelinev3.mov"
+                type="video/mp4">
+      </video>
+      <!-- <h2 class="subtitle has-text-centered">
+       COCONut annotations
+      </h2> -->
+    </div>
+  <!-- </div> -->
+</section>
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{coconut2024cvpr,
+  author    = {Xueqing Deng, Qihang Yu, Peng Wang, Xiaohui Shen, Liang-Chieh Chen},
+  title     = {COCONut: Modernizing COCO Segmentation},
+  booktitle   = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://drive.google.com/file/d/1QgiG-X15kUGUMikNBg5MSROMgHvc-GhG/view?usp=drive_link">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
