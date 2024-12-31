@@ -229,7 +229,7 @@
         <div class="content has-text-justified">
           <p>
             We present 1.58-bit FLUX, the first successful approach to quantizing the state-of-the-art text-to-image generation model, FLUX.1-dev, 
-            using <b>1.58-bit weights (i.e., values in {-1, 0, +1})</b>b> while maintaining comparable performance for generating 1024 x 1024 images. 
+            using <b>1.58-bit weights (i.e., values in {-1, 0, +1})</b> while maintaining comparable performance for generating 1024 x 1024 images. 
             Notably, our quantization method operates without access to image data, relying solely on self-supervision from the FLUX.1-dev model. 
             Additionally, we develop a custom kernel optimized for 1.58-bit operations, <b>achieving a 7.7x reduction in model storage, a 5.1x 
             reduction in inference memory, and improved inference latency</b>. Extensive evaluations on the GenEval and T2I Compbench benchmarks 
@@ -246,7 +246,26 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3"> Visual comparisons between FLUX and 1.58-bit FLUX on GenEval dataset. </h2>
+        <h2 class="title is-3"> Efficiency measurements on the transformer part. </h2>
+      </div>
+    </div>
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+        <div class="column is-centered ">
+          <img src="./static/images/fig2.web.jpg" alt="Figure 2" style="height: 100%;" />
+        </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+  
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"> Visual comparisons on GenEval dataset. </h2>
       </div>
     </div>
     <div class="columns is-centered ">
@@ -262,6 +281,25 @@
 
 
 <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3"> Visual comparisons on the val split of T2I CompBench. </h2>
+      </div>
+    </div>
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+        <div class="column is-centered ">
+          <img src="./static/images/fig4.web.jpg" alt="Figure 4" style="height: 100%;" />
+        </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<!-- <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
@@ -297,7 +335,7 @@
       </h2> -->
     </div>
   <!-- </div> -->
-</section>
+</section> -->
 
 
 
