@@ -181,9 +181,9 @@
                 type="image/jpg">
       </video> -->
       <img src="./static/images/fig1.web.jpg" alt="Figure 1" style="height: 100%;" />
-      <h2 class="subtitle has-text-centered">
-       <b>Visual comparisons between FLUX and 1.58-bit FLUX.</b>
-       1.58-bit FLUX demonstrates comparable generation quality to FLUX while employing 1.58-bit quantization, 
+      <h2 class="subtitle has-text-left">
+        <b>Visual comparisons between FLUX and 1.58-bit FLUX.</b>
+        1.58-bit FLUX demonstrates comparable generation quality to FLUX while employing 1.58-bit quantization, 
         where 99.5% of the 11.9B parameters in the vision transformer are constrained to the values +1, -1, or 0. 
         For consistency, all images in each comparison are generated using the same latent noise input. 
         1.58-bit FLUX utilizes a custom 1.58-bit kernel.
@@ -195,7 +195,7 @@
   </div>
 </section>
 
-<section class="hero is-light is-big", style="margin-top: -35px">
+<!-- <section class="hero is-light is-big", style="margin-top: -35px">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-five-fifths">
@@ -221,7 +221,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -232,7 +232,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            In recent decades, the vision community has witnessed remarkable progress in visual recognition, partially owing to advancements in dataset benchmarks.
+            We present 1.58-bit FLUX, the first successful approach to quantizing the state-of-the-art text-to-image generation model, FLUX.1-dev, 
+            using 1.58-bit weights (\ie, values in \{-1, 0, +1\}) while maintaining comparable performance for generating 1024 × 1024 images. 
+            Notably, our quantization method operates without access to image data, relying solely on self-supervision from the FLUX.1-dev model. 
+            Additionally, we develop a custom kernel optimized for 1.58-bit operations, achieving a 7.7× reduction in model storage, a 5.1× 
+            reduction in inference memory, and improved inference latency. Extensive evaluations on the GenEval and T2I Compbench benchmarks 
+            demonstrate the effectiveness of 1.58-bit FLUX in maintaining generation quality while significantly enhancing computational efficiency.
+<!--             In recent decades, the vision community has witnessed remarkable progress in visual recognition, partially owing to advancements in dataset benchmarks.
             Notably, the established COCO benchmark has propelled the development of modern detection and segmentation systems.
             However, the COCO segmentation benchmark has seen comparatively slow improvement over the last decade.
             Originally equipped with coarse polygon annotations for `thing' instances, it gradually incorporated coarse superpixel annotations for `stuff' regions, which were subsequently heuristically amalgamated to yield panoptic segmentation annotations.
@@ -241,7 +247,7 @@
             By enhancing the annotation quality and expanding the dataset to encompass <b>383K</b> images with more than <b>5.18M</b> panoptic masks, we introduce COCONut, the <b>COCO</b> <b>N</b>ext <b>U</b>niversal segmen<b>T</b>ation dataset.
             COCONut harmonizes segmentation annotations across semantic, instance, and panoptic segmentation with meticulously crafted high-quality masks, and establishes a robust benchmark for all segmentation tasks.
             To our knowledge, COCONut stands as the inaugural large-scale universal segmentation dataset, verified by human raters.
-            We anticipate that the release of COCONut will significantly contribute to the community's ability to assess the progress of novel neural networks.
+            We anticipate that the release of COCONut will significantly contribute to the community's ability to assess the progress of novel neural networks. -->
           </p>
         </div>
       </div>
