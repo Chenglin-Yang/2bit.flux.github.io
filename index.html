@@ -211,7 +211,6 @@
         1.  We introduce COCONut, a modern, universal segmentation dataset that encompasses about 383K images and 5.18M <span style="color: rgb(199, 9, 9)"><b>human-verified</b></span> panoptic segmentation masks, along with 
           with <span style="color:rgba(14, 122, 41, 0.904) " ><b>COCONut-val</b></span>, a new validation set as a novel and challenging testbed.
         </p>
-        <!-- <br -->
         <br>
         <p style="font-size: 20px;">
           2. We present benchmarked results on COCONut. As the training set increases, we observe consistent improvement in semantic/instance/panoptic segmentation and object detection, <span style="color: rgb(131, 102, 7)"><b>new SOTA result on open-vocabulary segmentation</b></span>, and <span style="color: rgb(4, 23, 107)"><b>better controllable image generation from semantic masks</b></span>. Additionally, our experimental results highlight the superior value of human annotations compared to pseudo-labels. 
@@ -233,11 +232,12 @@
         <div class="content has-text-justified">
           <p>
             We present 1.58-bit FLUX, the first successful approach to quantizing the state-of-the-art text-to-image generation model, FLUX.1-dev, 
-            using 1.58-bit weights (\ie, values in \{-1, 0, +1\}) while maintaining comparable performance for generating 1024 × 1024 images. 
+            using <b>1.58-bit weights (i.e., values in {-1, 0, +1})</b>b> while maintaining comparable performance for generating 1024 x 1024 images. 
             Notably, our quantization method operates without access to image data, relying solely on self-supervision from the FLUX.1-dev model. 
-            Additionally, we develop a custom kernel optimized for 1.58-bit operations, achieving a 7.7× reduction in model storage, a 5.1× 
-            reduction in inference memory, and improved inference latency. Extensive evaluations on the GenEval and T2I Compbench benchmarks 
+            Additionally, we develop a custom kernel optimized for 1.58-bit operations, <b>achieving a 7.7x reduction in model storage, a 5.1x 
+            reduction in inference memory, and improved inference latency</b>b>. Extensive evaluations on the GenEval and T2I Compbench benchmarks 
             demonstrate the effectiveness of 1.58-bit FLUX in maintaining generation quality while significantly enhancing computational efficiency.
+            
 <!--             In recent decades, the vision community has witnessed remarkable progress in visual recognition, partially owing to advancements in dataset benchmarks.
             Notably, the established COCO benchmark has propelled the development of modern detection and segmentation systems.
             However, the COCO segmentation benchmark has seen comparatively slow improvement over the last decade.
