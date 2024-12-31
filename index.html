@@ -187,9 +187,6 @@
         where 99.5% of the 11.9B parameters in the vision transformer are constrained to the values +1, -1, or 0. 
         For consistency, all images in each comparison are generated using the same latent noise input. 
         1.58-bit FLUX utilizes a custom 1.58-bit kernel.
-<!--         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits. -->
       </h2>
     </div>
   </div>
@@ -235,60 +232,33 @@
             using <b>1.58-bit weights (i.e., values in {-1, 0, +1})</b>b> while maintaining comparable performance for generating 1024 x 1024 images. 
             Notably, our quantization method operates without access to image data, relying solely on self-supervision from the FLUX.1-dev model. 
             Additionally, we develop a custom kernel optimized for 1.58-bit operations, <b>achieving a 7.7x reduction in model storage, a 5.1x 
-            reduction in inference memory, and improved inference latency</b>b>. Extensive evaluations on the GenEval and T2I Compbench benchmarks 
+            reduction in inference memory, and improved inference latency</b>. Extensive evaluations on the GenEval and T2I Compbench benchmarks 
             demonstrate the effectiveness of 1.58-bit FLUX in maintaining generation quality while significantly enhancing computational efficiency.
-            
-<!--             In recent decades, the vision community has witnessed remarkable progress in visual recognition, partially owing to advancements in dataset benchmarks.
-            Notably, the established COCO benchmark has propelled the development of modern detection and segmentation systems.
-            However, the COCO segmentation benchmark has seen comparatively slow improvement over the last decade.
-            Originally equipped with coarse polygon annotations for `thing' instances, it gradually incorporated coarse superpixel annotations for `stuff' regions, which were subsequently heuristically amalgamated to yield panoptic segmentation annotations.
-            These annotations, executed by different groups of raters, have resulted not only in coarse segmentation masks but also in inconsistencies between segmentation types.
-            In this study, we undertake a comprehensive reevaluation of the COCO segmentation annotations.
-            By enhancing the annotation quality and expanding the dataset to encompass <b>383K</b> images with more than <b>5.18M</b> panoptic masks, we introduce COCONut, the <b>COCO</b> <b>N</b>ext <b>U</b>niversal segmen<b>T</b>ation dataset.
-            COCONut harmonizes segmentation annotations across semantic, instance, and panoptic segmentation with meticulously crafted high-quality masks, and establishes a robust benchmark for all segmentation tasks.
-            To our knowledge, COCONut stands as the inaugural large-scale universal segmentation dataset, verified by human raters.
-            We anticipate that the release of COCONut will significantly contribute to the community's ability to assess the progress of novel neural networks. -->
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-    <!--/ Abstract. -->
-
-
 
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3"> COCO vs. COCONut dataset annotation comparison</h2>
+        <h2 class="title is-3"> Visual comparisons between FLUX and 1.58-bit FLUX on GenEval dataset. </h2>
       </div>
     </div>
     <div class="columns is-centered ">
       <div class="column is-full-width">
-
-        <!-- <p style="font-size: 20px;">
-         We compare our COCONut and COCO annotation below.
-        </p>     -->
         <div class="column is-centered ">
-      <img src="./static/images/coco_coconut_comparison.png"
-                class="interpolation-image"
-                alt="Interpolate start reference image."/>
-
-    </div>
-    <div class="column is-centered ">
-      <img src="./static/images/stuff_coco_coconut_anno_comp.png"
-                class="interpolation-image"
-                alt="Interpolate start reference image."/>
-
-    </div>
+          <img src="./static/images/fig3.web.jpg" alt="Figure 3" style="height: 100%;" />
+        </div>
+          </div>
+        </div>
+      </div>
   </div>
-</div>
-</div>
 </section>
-
 
 
 <section class="section">
@@ -300,15 +270,10 @@
     </div>
     <div class="columns is-centered ">
       <div class="column is-full-width">
-
-        <!-- <p style="font-size: 20px;">
-         We compare our COCONut and COCO annotation below.
-        </p>     -->
         <div class="column is-centered ">
       <img src="./static/images/class_dist_2x2.png"
                 class="interpolation-image"
                 alt="Interpolate start reference image."/>
-
     </div>
   </div>
 </div>
